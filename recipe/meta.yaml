@@ -44,7 +44,7 @@ about:
   home: https://github.com/jacobjma/abtem
   license: GPL-3.0-only
   license_family: GPL
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: 'ab initio Transmission Electron Microscopy'
 
   description: |
