@@ -1,5 +1,5 @@
 {% set name = "abtem" %}
-{% set version = "1.0.0b24" %}
+{% set version = "1.0.0b26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: 503e7775f9764cf8298cbd2d06c4a36a9c83efbd84d58721eee638adfd1e626e
+  sha256: 8a40b7ff5caeb5997924f43e981d5158159e521bda2abd4093c6f555661a4294
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - imageio
     - matplotlib-base
     - numba
-    - numpy
+    - numpy <=1.20,>=1.17
     - psutil
     - pyfftw
     - python >=3.6
@@ -45,7 +45,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'ab initio Transmission Electron Microscopy'
+  summary: ab initio Transmission Electron Microscopy
 
   description: |
     abTEM provides a Python API for running simulations of Transmission 
