@@ -1,0 +1,22 @@
+From f13708433a0f0ad8873713c8ab2e585c34a6218b Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Tue, 18 Jan 2022 07:49:43 -0700
+Subject: [PATCH] Import from collections.abc rather than collections
+
+---
+ abtem/temperature.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/abtem/temperature.py b/abtem/temperature.py
+index 5128872..435e56e 100644
+--- a/abtem/temperature.py
++++ b/abtem/temperature.py
+@@ -2,7 +2,7 @@
+ from abc import abstractmethod, ABCMeta
+ from typing import Mapping, Union, Sequence
+ from numbers import Number
+-from collections import Iterable
++from collections.abc import Iterable
+ 
+ import numpy as np
+ from ase import Atoms
