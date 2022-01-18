@@ -1,5 +1,5 @@
 {% set name = "abtem" %}
-{% set version = "1.0.0b28" %}
+{% set version = "1.0.0b29" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: 03e6bb1ddb0b48bf8f1e7a569803daf2cbc9b56c2c255f998c254c37c9cdc580
+  sha256: dbd99570a134bc557908b8f3422e7aae1704c2abc040ab29b56d5dcdb5dd3ea4
 
 build:
   number: 0
