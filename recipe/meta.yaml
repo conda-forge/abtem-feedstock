@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
   sha256: dbd99570a134bc557908b8f3422e7aae1704c2abc040ab29b56d5dcdb5dd3ea4
+  patches:
+    - collections.patch
 
 build:
   number: 0
