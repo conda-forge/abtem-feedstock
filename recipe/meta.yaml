@@ -33,6 +33,7 @@ requirements:
     - dask
     - threadpoolctl
     - zarr
+    - tabulate
 
 test:
   imports:
