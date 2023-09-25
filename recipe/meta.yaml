@@ -30,6 +30,7 @@ requirements:
     - python >=3.6
     - scipy
     - tqdm
+    - dask
 
 test:
   imports:
