@@ -35,6 +35,9 @@ requirements:
     - zarr
     - tabulate
     - traitlets
+    - ipympl
+    - ipywidgets
+    - jupyterlab
 
 test:
   imports:
