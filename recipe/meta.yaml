@@ -31,6 +31,7 @@ requirements:
     - scipy
     - tqdm
     - dask
+    - threadpoolctl
 
 test:
   imports:
