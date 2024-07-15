@@ -10,34 +10,32 @@ source:
   sha256: b85124fe90d5a716c5f97d351a8397c36310114dca9f520537f2d46bedde6aa7
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python >=3.9
+    - setuptools >=40.6.0
+    - wheel
     - pip
-    - python >=3.6
   run:
-    - ase
-    - h5py
-    - imageio
-    - matplotlib-base
-    - numba
+    - python >=3.9
     - numpy
-    - psutil
+    - pandas
+    - matplotlib-base >=3.6
     - pyfftw
-    - python >=3.6
     - scipy
-    - tqdm
-    - dask
-    - threadpoolctl
+    - numba
+    - dask-core >=2022.12.1
+    - distributed
     - zarr
+    - ase
+    - threadpoolctl
     - tabulate
-    - traitlets
-    - ipympl
     - ipywidgets
-    - jupyterlab
+    - ipympl
 
 test:
   imports:
