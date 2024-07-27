@@ -1,5 +1,5 @@
 {% set name = "abtem" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: b85124fe90d5a716c5f97d351a8397c36310114dca9f520537f2d46bedde6aa7
+  sha256: 4beed2f5405a58b765587e3f87164c3214046eaeac2f7480c6232859b5f19996
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.9,<3.12
     - setuptools >=40.6.0
     - wheel
     - pip
   run:
-    - python >=3.9
-    - numpy
+    - python >=3.9,<3.12
+    - numpy <2.0
     - pandas
     - matplotlib-base >=3.6
     - pyfftw
