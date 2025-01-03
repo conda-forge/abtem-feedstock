@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
   sha256: 4beed2f5405a58b765587e3f87164c3214046eaeac2f7480c6232859b5f19996
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.9,<3.12
+    - python {{ python_min }}
     - setuptools >=40.6.0
     - wheel
     - pip
   run:
-    - python >=3.9,<3.12
+    - python >={{ python_min }},<3.12
     - numpy <2.0
     - pandas
     - matplotlib-base >=3.6
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jacobjma/abtem
