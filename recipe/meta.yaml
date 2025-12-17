@@ -1,5 +1,6 @@
 {% set name = "abtem" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.8" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: 4beed2f5405a58b765587e3f87164c3214046eaeac2f7480c6232859b5f19996
+  sha256: 0619ef38fd2a7d2f173ed454857d72664baee155bd9e101564b5accb40a8e10f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -21,8 +22,9 @@ requirements:
     - wheel
     - pip
   run:
+    - tqdm
     - python >={{ python_min }},<3.12
-    - numpy <2.0
+    - numpy
     - pandas
     - matplotlib-base >=3.6
     - pyfftw
