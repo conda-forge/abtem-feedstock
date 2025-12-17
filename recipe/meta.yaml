@@ -1,5 +1,6 @@
 {% set name = "abtem" %}
 {% set version = "1.0.8" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
