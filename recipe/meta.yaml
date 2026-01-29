@@ -1,5 +1,5 @@
 {% set name = "abtem" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: 0619ef38fd2a7d2f173ed454857d72664baee155bd9e101564b5accb40a8e10f
+  sha256: 440c38ed82f2591b0aabf64f549aaf22febf86ef9615dd16b9c3fcbdc1518a87
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - pyfftw
     - scipy
     - numba
-    - dask-core >=2022.12.1
+    - dask-core >=2022.12.1,!=2025.12.*,!=2026.1.*
     - distributed
     - zarr
     - ase
