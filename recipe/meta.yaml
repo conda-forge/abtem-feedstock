@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - tqdm
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }}
     - numpy >=2.0.0
     - pandas
     - matplotlib-base >=3.6
