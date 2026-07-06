@@ -1,5 +1,5 @@
 {% set name = "abtem" %}
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/abtem-{{ version }}.tar.gz
-  sha256: 440c38ed82f2591b0aabf64f549aaf22febf86ef9615dd16b9c3fcbdc1518a87
+  sha256: 30717db9d339aed03ad5238aa7504b75694481a455e2cfc95f1453f49583f3a2
 
 build:
   number: 0
@@ -23,16 +23,16 @@ requirements:
     - pip
   run:
     - tqdm
-    - python >={{ python_min }},<3.12
-    - numpy
+    - python >={{ python_min }}
+    - numpy >=2.0.0
     - pandas
     - matplotlib-base >=3.6
     - pyfftw
     - scipy
     - numba
-    - dask-core >=2022.12.1,!=2025.12.*,!=2026.1.*
+    - dask-core >=2022.12.1,!=2025.12.*,!=2026.1.0,!=2026.1.1
     - distributed
-    - zarr
+    - zarr >=3.1
     - ase
     - threadpoolctl
     - tabulate
