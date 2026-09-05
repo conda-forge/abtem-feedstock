@@ -11,7 +11,7 @@ Summary: ab initio Transmission Electron Microscopy
 
 Development: https://github.com/jacobjma/abtem
 
-Documentation: https://abtem.readthedocs.io
+Documentation: https://abtem.readthedocs.io/
 
 abTEM provides a Python API for running simulations of Transmission
 Electron Microscopy images. It is written entirely in Python, which
@@ -20,7 +20,6 @@ accessible from Python, and allows for a simple and intuitive user
 interface. The computationally demanding parts are implemented using
 jit-compiled Numba code and high-performance libraries, maintaining
 speed while ensuring portability.
-
 
 Current build status
 ====================
@@ -53,31 +52,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `abtem` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install abtem
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install abtem
 ```
 
-It is possible to list all of the versions of `abtem` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add abtem
+# for installing globally
+pixi global install abtem
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `abtem` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search abtem --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search abtem --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search abtem --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -89,6 +130,8 @@ mamba repoquery whoneeds abtem --channel conda-forge
 # List dependencies of `abtem`:
 mamba repoquery depends abtem --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
