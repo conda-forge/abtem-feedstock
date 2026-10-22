@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: abtem
-  version: "1.0.10"
+  version: "1.0.11"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/abtem-${{ version }}.tar.gz
-  sha256: 30717db9d339aed03ad5238aa7504b75694481a455e2cfc95f1453f49583f3a2
+  sha256: 5c231bb7c050b64d5ec6341a6678bf2becaef55dd74c34a8d8d29abd2ab7f99a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
